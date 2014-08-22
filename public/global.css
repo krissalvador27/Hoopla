@@ -1,0 +1,19 @@
+#global_header {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 40px;
+	width: 100%;
+	background: #ff0;
+	border-bottom: 1px solid #000;
+	z-index:99999;
+}
+
+.ui-page {
+	padding-top: 40px;
+}
+
+.modal {
+	display: none;
+	text-align: center;
+}

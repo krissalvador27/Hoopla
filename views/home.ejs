@@ -1,0 +1,66 @@
+<!-- views/index.ejs -->
+<!doctype html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel = "stylesheet" href = "/public/bootstrap/bootstrap.min.css">
+  <link rel = "stylesheet" href = "/public/bootstrap/bootstrap-theme.min.css">
+  <link rel = "stylesheet" href = "/public/global.css">
+  <link rel = "stylesheet" href = "/public/css/custom.css">
+  <script type = "text/javascript" src = "/public/jquery/jquery-2.1.1.min.js"> </script>
+  <script type = "text/javascript" src = "/public/jquery/jquery-ui.min.js"> </script>
+  <script type = "text/javascript" src = "/public/js/home_page.js"> </script>
+  <script type = "text/javascript" src = "/public/bootstrap/bootstrap.min.js"> </script>
+  <link rel="stylesheet" href="/public/jquery/jquery-ui.min.css">
+  <link rel="shortcut icon" href="/public/images/favicon.png">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+  <style>
+    body    { padding-top:80px; }
+  </style>
+</head>
+<body>
+    <div class = "header_panel">Hoopla<span class = "domain">@<%= domain %></span><a href = "/logout"><span class = "logout">Logout</span></a></div>
+  <div class="container">
+      <div class = "row"><div class = "col-xs-8 col-xs-offset-2">
+        <div class = "row new_post" hidden><div class = "col-xs-9 col-xs-offset-1">
+            <div class = "title">
+            <div style = "font-size:20px;  color:#414141;">Title:</div>
+            <input style = "width:100%;padding:4px;"type="text" maxlength = "200" id="create_hoop_title"></input>
+            </div>
+            <div class = "message_body">
+            <div style = "font-size:20px;color:#414141;">Content:</div>
+            <textarea rows="4" cols="50" style = "width:100%; max-width:100%; padding:4px;" id="create_hoop_content" maxlength = "1000"></textarea>
+            </div>
+                <span class = "loading_button" style = "float:right;margin-right:54px;" hidden><img src = "/public/images/loading.gif"></span>
+            <div class = "create_hoopla btn btn-default" style = "float:right;margin-top:6px;margin-right:18px;"><span class="fa fa-comment"> Submit Post</span></div>
+          </div>
+        </div>
+      <table class = "custom_table hoop_table" style = "width:100%;position:absolute;">
+      <tbody>
+        <% for(var i = arr.length-1-hoopStart; i >= arr.length-1-hoopEnd; i--){ %>
+        <tr>
+          <td class="star-holder" data-hoopid = '<%= arr[i]._id %>' style="width:60px; <% if (plusOnes.indexOf(arr[i]._id) !== -1) {%><%= 'color:rgb(72, 197, 182);' %><% } %>"><span class="fa fa-plus"></span><span class = "score-holder"> <%= arr[i].score  %></span></td>
+          
+          <td>
+            <a href="<%= '/post/' + arr[i]._id %>">
+              <div>
+                <%= arr[i].title  %>
+              </div>
+            </a>
+            <div class = "poster">
+                posted by <%= arr[i].commenter %> <%= arr[i].timestamp %> ago <br>
+                <%= arr[i].replies.length %> comments
+            </div>
+          </td>
+
+        </tr>
+        <% }; %><tr style =  "border-bottom: 0;font-size:14px;"><td></td><td style = "float:right;"><a href = "/home_prev" style = "margin-right:14px;padding-bottom:60px;">Prev Page</a><a href = "/home_next">Next Page</a><br><span style = "color: rgb(158, 158, 158);">page <%= (hoopStart%19) + 1 %> of <%= (Math.ceil(arr.length/20)) %></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class = "col-xs-2" style = "text-align:center;">  <div class = "create_hoop btn btn-default" style = "margin-top:20px;margin-right:18px;"><span class="fa fa-pencil"> New Post</span></div>
+  </div>
+
+  </div>
+</body>
+</html>

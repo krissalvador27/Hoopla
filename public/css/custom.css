@@ -1,0 +1,181 @@
+.thin {
+  font-weight: 100;
+}
+
+.poster {
+  color: rgb(158, 158, 158);
+  font-size: 14px;
+}
+
+.header {
+  font-size: 8vw;
+  color: #3498DB;
+  text-align: center;
+}
+
+.custom_table,tr,td {
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+.star-holder-page {
+  font-size: 22px;
+}
+
+.page-commentor {
+  color: rgb(158, 158, 158);
+  font-size: 16px;
+}
+
+.custom_well {
+  padding: 10px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 4px;
+  color:#414141;
+}
+
+.post_body {
+  font-size: 18px;
+}
+
+.la_commentor {
+ color: rgb(158, 158, 158);
+  font-size: 14px;
+  margin-left:10px;
+}
+.la_body {
+  font-size:18px;
+  color: #414141;
+  margin-left: 10px;
+}
+
+.child_first {
+  border-left: 1px dotted red;
+  display: block;
+  height: 11px;
+  border-bottom: 1px dotted red;
+}
+
+.hoop_content {
+  font-size: 28px;
+  color:#4B4A4A;
+}
+
+tr  {
+  border-bottom:1px solid #DBDBDB
+}
+
+.hoopla_home {
+  cursor:pointer;
+}
+
+
+
+.landing_text {
+  font-size: 22px;
+  color: #6d6d6d;
+}
+
+.center {
+  padding-bottom: 40px;
+  border-radius: 4px;
+}
+table.hoop_table {
+   font-size: 17px;
+}
+
+.warn {
+  background-color: #fcc;
+  color: #FF0000;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #FF0000;
+  text-align: center;
+  padding-top: 5px; padding-bottom: 5px;
+  margin-top: 2px; margin-bottom: 10px;
+}
+
+.domain {
+  text-align:center;
+  color:#414141;
+}
+
+.message_body {
+  padding-top: 8px;
+}
+
+textarea  {
+   font-size: 16px;
+   font-family: helvetica;
+   color:#545454;
+} 
+
+.star-holder:hover {
+  cursor: pointer;
+  color:rgb(72, 197, 182);
+}
+
+.star-holder {
+  color:#7c7c7c;
+}
+
+.new_post input  {
+   font-size: 16px;
+   color: #545454;
+   font-family: helvetica;
+} 
+
+.score-holder {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header_panel {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  background-color: #3498DB;
+  padding: 4px;
+  font-size: 50px;
+  font-weight: 100;
+  color: white;
+  text-indent: 14%;
+  padding-bottom: 0px;
+}
+
+.logout {
+  position: absolute;
+  right: 12%;
+  font-size: 24px;
+  top: 33px;
+}
+
+a .logout {
+  color:white;
+}
+
+a .logout:hover {
+  text-decoration: underline;
+}
+
+.warning {
+  background-color: #fcc;
+  color: #FF0000;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #FF0000;
+  text-align: center;
+  padding-top: 5px; padding-bottom: 5px;
+  margin-top: 2px; margin-bottom: 10px;
+}
+ 
+.success {
+  background-color: #ceffce;
+  color: #008000;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #008000;
+  text-align: center;
+  padding-top: 5px; padding-bottom: 5px;
+  margin-bottom: 10px;
+}
